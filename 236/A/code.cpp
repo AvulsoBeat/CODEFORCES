@@ -6,28 +6,28 @@ int main(){
     cin >> s;
     int n = s.length();
 
-    int qtdLetraRepetida = 0;
+    int letraRepitida = 0;
 
-    for (int i = 0; i < n; i++){
-        bool JaViantes = false;
+    for(int i = 0; i < n; i++){
+        bool jaViAntes = false;
 
-        for(int j = 0; j < i; j++){
+        for (int j = 0; j < i; j++){
             if(s[j] == s[i]){
-            JaViantes = true;
-            }
+            jaViAntes = true;
+             }
         }
 
-        if(!JaViantes){
-            qtdLetraRepetida++;
+        if(!jaViAntes){
+         letraRepitida++;
         }
-
     }
-    if(qtdLetraRepetida % 2 == 0){
+
+
+    if(letraRepitida % 2 == 0){
         cout << "CHAT WITH HER!" << endl;
     } else {
         cout << "IGNORE HIM!" << endl;
     }
     return 0;
-
 }
 

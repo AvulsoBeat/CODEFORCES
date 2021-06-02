@@ -2,32 +2,29 @@
 using namespace std;
 
 int main(){
-    int precoBananas;
-    int quantidadeDinheiro;
-    int comprarBananas;
-    cin >> precoBananas;
-    cin >> quantidadeDinheiro;
-    cin >> comprarBananas;
+    int precoBanana;
+    int oDinheiro;
+    int qtdBanana;
+    cin >> precoBanana;
+    cin >> oDinheiro;
+    cin >> qtdBanana;
 
     int emprestimo = 0;
-    int precoTotal = 0;
+    int precototal = 0;
 
-    for(int i = 1; i <= comprarBananas; i++){
-        precoTotal = precoTotal + precoBananas * i;
+    for(int i = 0; i <= qtdBanana; i++){
+        precototal = precototal + precoBanana * i;
     }
 
-        if (precoTotal == quantidadeDinheiro){
+    if(precototal == oDinheiro){
         cout << '0' << endl;
-         }
-
-        if(precoTotal < quantidadeDinheiro){
-            cout << '0' << endl;
-        }
-
-        if (precoTotal > quantidadeDinheiro){
-        emprestimo = precoTotal - quantidadeDinheiro;
+    }
+    if(precototal > oDinheiro){
+        emprestimo = precototal - oDinheiro;
         cout << emprestimo << endl;
-        }
-
-        return 0;
+    }
+    if(precototal < oDinheiro){
+        cout << '0' << endl;
+    }
+    return 0;
 }
